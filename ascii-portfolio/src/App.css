@@ -1,0 +1,57 @@
+.main-content {
+  display: flex;
+  flex-flow: row wrap;      /* Side-by-side (horizontal) */
+  align-items: center;      /* Vertically align items */
+  justify-content: flex-end;
+  height: 100vh;            /* Make it fill the screen vertically */
+  width: 100vw;
+  background-color: black;
+}
+
+
+.navbar {
+  position: static;
+  top: 10px;                     /* Give some space from the top */
+  left: 50%;
+  transform: translateX(-5%);
+  width: 90%;                    /* Leave room on the sides */
+  height: 40px;
+  background-color: #202020;
+  color: #f8f8f8;
+  overflow: hidden;
+  z-index: 999;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;           /* ✅ Rounded corners */
+
+}
+
+
+.scrolling-links {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+  padding-left: 100%;           /* Start off-screen */
+}
+
+.scrolling-links span {
+  display: inline-block;
+  padding-right: 100%;          /* Loop spacing */
+  font-size: 1rem;
+}
+
+.navbar a {
+  color: #f8f8f8;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
