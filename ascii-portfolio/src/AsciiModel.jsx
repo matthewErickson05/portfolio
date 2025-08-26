@@ -102,7 +102,7 @@ export default function AsciiModel() {
 
 
   return <div ref={containerRef} className="ascii-container" style={{
-  width: "65vw",  // or whatever size you want
+  width: "60vw",  // or whatever size you want
   height: '90vh',
   position: 'relative'  // important for positioning
 }} />;
